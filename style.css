@@ -2,91 +2,73 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  background: rgba(0, 0, 0, 0.6);
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+nav {
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
   z-index: 1000;
 }
 
-header .logo {
-  width: 100px;
-}
-
 nav ul {
-  list-style: none;
   display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
 nav ul li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
 section {
-  min-height: 100vh;   /* supaya section tak collapse */
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white;
+  justify-content: center;
   background-size: cover;
   background-position: center;
-  padding: 60px 20px;
+  position: relative;
 }
 
-/* ✅ Gambar confirm keluar (link Unsplash) */
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Background images */
 #home {
-  background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+  background-image: url('https://safepropest.com/wp-content/uploads/2017/03/Termite-Pest-Control-Frisco-TX.jpg');
 }
 
 #about {
-  background-image: url('https://images.unsplash.com/photo-1592914610353-04d7c5d7a81d');
+  background-image: url('https://d1x7qj5rlh2e19.cloudfront.net/wp-content/uploads/2022/01/21085025/00_California_farm-377339167.jpg');
 }
 
 #features {
-  background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+  background-image: url('https://insight.study.csu.edu.au/wp-content/uploads/2018/04/Future-of-Agriculture-feature.jpg');
 }
 
 #report {
-  background-image: url('https://images.unsplash.com/photo-1506765515384-028b60a970df');
+  background-image: url('http://dailysignal.com/wp-content/uploads/Farm.jpg');
 }
 
 #contact {
-  background-image: url('https://images.unsplash.com/photo-1617196038661-d7f4e16a3a5d');
-}
-
-footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-h1, h2 {
-  margin-bottom: 20px;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  background: green;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
+  background-image: url('https://assets-news.housing.com/news/wp-content/uploads/2022/03/19234622/featured1-compressed.jpg');
 }
 
