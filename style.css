@@ -37,7 +37,7 @@ nav ul li a {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 100vh;   /* supaya section tak collapse */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,24 +48,25 @@ section {
   padding: 60px 20px;
 }
 
+/* ✅ Gambar confirm keluar (link Unsplash) */
 #home {
-  background-image: url('https://images.unsplash.com/photo-1560785496-3c9b2e7a4a5f');
+  background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
 }
 
 #about {
-  background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+  background-image: url('https://images.unsplash.com/photo-1592914610353-04d7c5d7a81d');
 }
 
 #features {
-  background-image: url('https://images.unsplash.com/photo-1617196038661-d7f4e16a3a5d');
+  background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
 }
 
 #report {
-  background-image: url('https://images.unsplash.com/photo-1600423115367-3c6d5327d85a');
+  background-image: url('https://images.unsplash.com/photo-1506765515384-028b60a970df');
 }
 
 #contact {
-  background-image: url('https://images.unsplash.com/photo-1506765515384-028b60a970df');
+  background-image: url('https://images.unsplash.com/photo-1617196038661-d7f4e16a3a5d');
 }
 
 footer {
