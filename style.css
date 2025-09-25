@@ -8,7 +8,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: url('farm-bg.jpg') no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') 
+              no-repeat center center fixed;
   background-size: cover;
   color: #333;
 }
@@ -19,7 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: rgba(0, 0, 0, 0.6); /* Transparent navbar */
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
 }
 
@@ -81,7 +82,7 @@ nav ul li a {
 /* Section Styling */
 section {
   padding: 50px;
-  background: rgba(255, 255, 255, 0.85); /* Semi-transparent box for readability */
+  background: rgba(255, 255, 255, 0.85);
   margin: 20px;
   border-radius: 10px;
 }
