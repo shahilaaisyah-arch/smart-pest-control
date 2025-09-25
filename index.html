@@ -9,6 +9,7 @@
 <body>
   <!-- Navigation -->
   <nav>
+    <div class="logo">🌿 PestControl</div>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -20,43 +21,76 @@
 
   <!-- Sections -->
   <section id="home">
-    <div class="overlay">
-      <h1>Welcome to Pest Control Farm</h1>
-      <p>Smart solutions for a pest-free environment</p>
+    <div class="overlay fade-in">
+      <h1>Smart Pest Control Farm</h1>
+      <p>Eco-friendly IoT solutions to protect your crops</p>
+      <a href="#about" class="btn">Learn More</a>
     </div>
   </section>
 
   <section id="about">
-    <div class="overlay">
+    <div class="overlay fade-in">
       <h2>About Us</h2>
-      <p>We provide innovative pest control solutions for modern farms.</p>
+      <p>We provide innovative pest control solutions using advanced IoT & robotics to help farmers save crops, reduce chemicals, and increase yield.</p>
     </div>
   </section>
 
   <section id="features">
-    <div class="overlay">
+    <div class="overlay fade-in">
       <h2>Our Features</h2>
       <ul>
-        <li>IoT based monitoring</li>
-        <li>Eco-friendly solutions</li>
-        <li>Real-time reporting</li>
+        <li>✔ IoT based pest detection</li>
+        <li>✔ Eco-friendly treatment</li>
+        <li>✔ Automated real-time reports</li>
+        <li>✔ Remote monitoring</li>
       </ul>
     </div>
   </section>
 
   <section id="report">
-    <div class="overlay">
+    <div class="overlay fade-in">
       <h2>Reports</h2>
-      <p>Track pest activity and control effectiveness with real-time data.</p>
+      <p>Track pest activities, farm conditions, and system performance with real-time dashboards accessible anywhere.</p>
     </div>
   </section>
 
   <section id="contact">
-    <div class="overlay">
+    <div class="overlay fade-in">
       <h2>Contact Us</h2>
       <p>Email: info@pestcontrolfarm.com</p>
       <p>Phone: +60 12-3456789</p>
+      <a href="mailto:info@pestcontrolfarm.com" class="btn">Email Us</a>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Pest Control Farm. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for scroll animation -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
 </html>
