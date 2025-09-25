@@ -5,36 +5,52 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: white;
-  text-align: center;
+  scroll-behavior: smooth;
 }
 
+/* Navbar */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
   z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
 }
 
 nav ul {
   display: flex;
-  justify-content: center;
   list-style: none;
 }
 
 nav ul li {
-  margin: 0 20px;
+  margin-left: 25px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Sections */
 section {
   height: 100vh;
   display: flex;
@@ -42,13 +58,68 @@ section {
   justify-content: center;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;  /* 🔥 Parallax effect */
   position: relative;
+  padding: 20px;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 800px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+p, li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ffd700;
+  color: black;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: orange;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background: black;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
 }
 
 /* Background images */
@@ -70,5 +141,17 @@ section {
 
 #contact {
   background-image: url('https://assets-news.housing.com/news/wp-content/uploads/2022/03/19234622/featured1-compressed.jpg');
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
 }
 
